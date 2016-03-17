@@ -9,12 +9,19 @@
 #include <pthread.h>
 
 
+
 struct lconv {
   char* decimal_point;
   char* thousands_sep;
 };
 
+#ifdef __cplusplus
+extern "C" {  
+#endif
 
 
 struct lconv* localeconv(void);
 
+#ifdef __cplusplus
+}
+#endif
